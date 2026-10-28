@@ -10,6 +10,8 @@ the notes of the version's GitHub Release.
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-10-28
+
 ### Added
 
 - A calendar integration (Gladys 5.2.0 or later): every user who enables it in "My calendars" gets a
@@ -27,3 +29,6 @@ the notes of the version's GitHub Release.
 - Only what changed is sent again; a calendar the user switched off is skipped; a refused push is
   retried and shown in the status.
 - A "Check the configuration" button, and the documentation in English, French, German and Spanish.
+
+[Unreleased]: https://github.com/prohand/gladys-calendar-holidays/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/prohand/gladys-calendar-holidays/releases/tag/v1.0.1

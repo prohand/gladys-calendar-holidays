@@ -1,6 +1,6 @@
 {
   "name": "gladys-calendar-holidays",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Gladys Assistant integration that adds public holidays and French school holidays to the Gladys calendar.",
   "type": "module",
