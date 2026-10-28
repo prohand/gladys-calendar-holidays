@@ -1,0 +1,166 @@
+{
+  "total_count": 23,
+  "results": [
+    {
+      "description": "Vacances d'Été",
+      "population": "Enseignants",
+      "start_date": "2025-07-04T22:00:00+00:00",
+      "end_date": "2025-08-28T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances d'Été",
+      "population": "Élèves",
+      "start_date": "2025-07-04T22:00:00+00:00",
+      "end_date": "2025-08-31T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Abolition de l’esclavage",
+      "population": "Saint-Barthélémy",
+      "start_date": "2025-10-08T22:00:00+00:00",
+      "end_date": "2025-10-08T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances de la Toussaint",
+      "population": "-",
+      "start_date": "2025-10-17T22:00:00+00:00",
+      "end_date": "2025-11-02T23:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances de Noël",
+      "population": "-",
+      "start_date": "2025-12-19T23:00:00+00:00",
+      "end_date": "2026-01-04T23:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances de Carnaval",
+      "population": "-",
+      "start_date": "2026-02-06T23:00:00+00:00",
+      "end_date": "2026-02-22T23:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Mi-carême",
+      "population": "Guadeloupe & Saint-Martin",
+      "start_date": "2026-03-11T23:00:00+00:00",
+      "end_date": "2026-03-11T23:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances de Pâques",
+      "population": "-",
+      "start_date": "2026-04-01T22:00:00+00:00",
+      "end_date": "2026-04-19T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Semaine en mai",
+      "population": "Guadeloupe & Saint-Barthélémy",
+      "start_date": "2026-05-14T22:00:00+00:00",
+      "end_date": "2026-05-15T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Semaine en mai",
+      "population": "Guadeloupe & Saint-Barthélémy",
+      "start_date": "2026-05-25T22:00:00+00:00",
+      "end_date": "2026-05-25T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Abolition de l’esclavage",
+      "population": "Guadeloupe sauf Saint-Martin",
+      "start_date": "2026-05-26T22:00:00+00:00",
+      "end_date": "2026-05-26T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Abolition de l’esclavage",
+      "population": "Saint-Martin",
+      "start_date": "2026-05-27T22:00:00+00:00",
+      "end_date": "2026-05-27T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Semaine en mai",
+      "population": "Saint Martin",
+      "start_date": "2026-05-28T22:00:00+00:00",
+      "end_date": "2026-05-28T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances d'Été",
+      "population": "Enseignants",
+      "start_date": "2026-07-03T22:00:00+00:00",
+      "end_date": "2026-08-30T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances d'Été",
+      "population": "Élèves",
+      "start_date": "2026-07-03T22:00:00+00:00",
+      "end_date": "2026-08-31T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Abolition de l’esclavage",
+      "population": "Saint-Barthélémy",
+      "start_date": "2026-10-08T22:00:00+00:00",
+      "end_date": "2026-10-09T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances de la Toussaint",
+      "population": "-",
+      "start_date": "2026-10-16T22:00:00+00:00",
+      "end_date": "2026-11-02T23:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances de Noël",
+      "population": "-",
+      "start_date": "2026-12-18T23:00:00+00:00",
+      "end_date": "2027-01-03T23:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances de Carnaval",
+      "population": "-",
+      "start_date": "2027-02-05T23:00:00+00:00",
+      "end_date": "2027-02-21T23:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Mi-carême",
+      "population": "Guadeloupe & Saint-Martin",
+      "start_date": "2027-03-03T23:00:00+00:00",
+      "end_date": "2027-03-04T23:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Vacances de Pâques",
+      "population": "-",
+      "start_date": "2027-03-24T23:00:00+00:00",
+      "end_date": "2027-04-11T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Abolition de l’esclavage",
+      "population": "Guadeloupe sauf Saint-Martin",
+      "start_date": "2027-05-26T22:00:00+00:00",
+      "end_date": "2027-05-27T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    },
+    {
+      "description": "Abolition de l’esclavage",
+      "population": "Saint-Martin",
+      "start_date": "2027-05-27T22:00:00+00:00",
+      "end_date": "2027-05-28T22:00:00+00:00",
+      "zones": "Guadeloupe"
+    }
+  ]
+}

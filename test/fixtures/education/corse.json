@@ -1,0 +1,103 @@
+{
+  "total_count": 14,
+  "results": [
+    {
+      "description": "Vacances d'Été",
+      "population": "Enseignants",
+      "start_date": "2025-07-04T22:00:00+00:00",
+      "end_date": "2025-08-31T22:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances d'Été",
+      "population": "Élèves",
+      "start_date": "2025-07-04T22:00:00+00:00",
+      "end_date": "2025-09-01T22:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances de la Toussaint",
+      "population": "-",
+      "start_date": "2025-10-17T22:00:00+00:00",
+      "end_date": "2025-11-02T23:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances de Noël",
+      "population": "-",
+      "start_date": "2025-12-19T23:00:00+00:00",
+      "end_date": "2026-01-04T23:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances d'Hiver",
+      "population": "-",
+      "start_date": "2026-02-13T23:00:00+00:00",
+      "end_date": "2026-03-01T23:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances de Printemps",
+      "population": "-",
+      "start_date": "2026-04-10T22:00:00+00:00",
+      "end_date": "2026-04-26T22:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Pont de l'Ascension",
+      "population": "-",
+      "start_date": "2026-05-14T22:00:00+00:00",
+      "end_date": "2026-05-14T22:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances d'Été",
+      "population": "Enseignants",
+      "start_date": "2026-07-03T22:00:00+00:00",
+      "end_date": "2026-08-31T22:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances d'Été",
+      "population": "Élèves",
+      "start_date": "2026-07-03T22:00:00+00:00",
+      "end_date": "2026-09-02T22:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances de la Toussaint",
+      "population": "-",
+      "start_date": "2026-10-16T22:00:00+00:00",
+      "end_date": "2026-11-01T23:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances de Noël",
+      "population": "-",
+      "start_date": "2026-12-18T23:00:00+00:00",
+      "end_date": "2027-01-03T23:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances d'Hiver",
+      "population": "-",
+      "start_date": "2027-02-12T23:00:00+00:00",
+      "end_date": "2027-02-28T23:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Vacances de Printemps",
+      "population": "-",
+      "start_date": "2027-04-09T22:00:00+00:00",
+      "end_date": "2027-04-25T22:00:00+00:00",
+      "zones": "Corse"
+    },
+    {
+      "description": "Pont de l'Ascension",
+      "population": "-",
+      "start_date": "2027-05-06T22:00:00+00:00",
+      "end_date": "2027-05-09T22:00:00+00:00",
+      "zones": "Corse"
+    }
+  ]
+}

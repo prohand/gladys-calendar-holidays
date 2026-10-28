@@ -1,0 +1,2218 @@
+{
+  "manifest_version": 1,
+  "type": "calendar",
+  "name": "Holidays Calendar",
+  "description": {
+    "en": "Public holidays of 200 countries and French school holidays in the Gladys calendar.",
+    "fr": "Jours fériés de 200 pays et vacances scolaires françaises dans le calendrier de Gladys.",
+    "de": "Feiertage aus 200 Ländern und französische Schulferien im Kalender von Gladys.",
+    "es": "Festivos de 200 países y vacaciones escolares francesas en el calendario de Gladys."
+  },
+  "version": "1.0.0",
+  "docker_image": "ghcr.io/prohand/gladys-calendar-holidays:1.0.0",
+  "gladys_version": ">=5.2.0",
+  "cover_image": "https://raw.githubusercontent.com/prohand/gladys-calendar-holidays/main/cover.png",
+  "categories": ["services"],
+  "transports": ["local"],
+  "config_schema": [
+    {
+      "key": "intro",
+      "type": "section",
+      "label": {
+        "en": "How it works",
+        "fr": "Fonctionnement",
+        "de": "So funktioniert es",
+        "es": "Funcionamiento"
+      },
+      "description": {
+        "en": "Public holidays are computed offline for the chosen country, without any account. Each user then enables the integration in the \"My calendars\" block of this page and gets the calendars in the Calendar view. To use them in scenes, share them there.",
+        "fr": "Les jours fériés sont calculés hors ligne pour le pays choisi, sans compte. Chaque utilisateur active ensuite l'intégration dans le bloc « Mes calendriers » de cette page et retrouve les calendriers dans la vue Calendrier. Pour les utiliser dans les scènes, partagez-les à cet endroit.",
+        "de": "Die Feiertage werden für das gewählte Land offline berechnet, ohne Konto. Jede Person aktiviert danach die Integration im Block „Meine Kalender“ dieser Seite und findet die Kalender in der Kalenderansicht. Um sie in Szenen zu nutzen, teile sie dort.",
+        "es": "Los festivos se calculan sin conexión para el país elegido, sin cuenta. Después, cada usuario activa la integración en el bloque «Mis calendarios» de esta página y encuentra los calendarios en la vista Calendario. Para usarlos en las escenas, compártalos allí."
+      },
+      "links": [
+        {
+          "url": "https://github.com/prohand/gladys-calendar-holidays#readme",
+          "label": {
+            "en": "Documentation",
+            "fr": "Documentation",
+            "de": "Dokumentation",
+            "es": "Documentación"
+          }
+        }
+      ]
+    },
+    {
+      "key": "country",
+      "type": "select",
+      "label": {
+        "en": "Country",
+        "fr": "Pays",
+        "de": "Land",
+        "es": "País"
+      },
+      "required": true,
+      "default": "FR",
+      "options": [
+        {
+          "value": "FR",
+          "label": {
+            "en": "France",
+            "fr": "France",
+            "de": "Frankreich",
+            "es": "Francia"
+          }
+        },
+        {
+          "value": "BE",
+          "label": {
+            "en": "Belgium",
+            "fr": "Belgique",
+            "de": "Belgien",
+            "es": "Bélgica"
+          }
+        },
+        {
+          "value": "CH",
+          "label": {
+            "en": "Switzerland",
+            "fr": "Suisse",
+            "de": "Schweiz",
+            "es": "Suiza"
+          }
+        },
+        {
+          "value": "LU",
+          "label": {
+            "en": "Luxembourg",
+            "fr": "Luxembourg",
+            "de": "Luxemburg",
+            "es": "Luxemburgo"
+          }
+        },
+        {
+          "value": "CA",
+          "label": {
+            "en": "Canada",
+            "fr": "Canada",
+            "de": "Kanada",
+            "es": "Canadá"
+          }
+        },
+        {
+          "value": "MC",
+          "label": {
+            "en": "Monaco",
+            "fr": "Monaco",
+            "de": "Monaco",
+            "es": "Mónaco"
+          }
+        },
+        {
+          "value": "AX",
+          "label": {
+            "en": "Åland Islands",
+            "fr": "Îles Åland",
+            "de": "Ålandinseln",
+            "es": "Islas Aland"
+          }
+        },
+        {
+          "value": "AL",
+          "label": {
+            "en": "Albania",
+            "fr": "Albanie",
+            "de": "Albanien",
+            "es": "Albania"
+          }
+        },
+        {
+          "value": "DZ",
+          "label": {
+            "en": "Algeria",
+            "fr": "Algérie",
+            "de": "Algerien",
+            "es": "Argelia"
+          }
+        },
+        {
+          "value": "AS",
+          "label": {
+            "en": "American Samoa",
+            "fr": "Samoa américaines",
+            "de": "Amerikanisch-Samoa",
+            "es": "Samoa Americana"
+          }
+        },
+        {
+          "value": "AD",
+          "label": {
+            "en": "Andorra",
+            "fr": "Andorre",
+            "de": "Andorra",
+            "es": "Andorra"
+          }
+        },
+        {
+          "value": "AO",
+          "label": {
+            "en": "Angola",
+            "fr": "Angola",
+            "de": "Angola",
+            "es": "Angola"
+          }
+        },
+        {
+          "value": "AI",
+          "label": {
+            "en": "Anguilla",
+            "fr": "Anguilla",
+            "de": "Anguilla",
+            "es": "Anguila"
+          }
+        },
+        {
+          "value": "AG",
+          "label": {
+            "en": "Antigua & Barbuda",
+            "fr": "Antigua-et-Barbuda",
+            "de": "Antigua und Barbuda",
+            "es": "Antigua y Barbuda"
+          }
+        },
+        {
+          "value": "AR",
+          "label": {
+            "en": "Argentina",
+            "fr": "Argentine",
+            "de": "Argentinien",
+            "es": "Argentina"
+          }
+        },
+        {
+          "value": "AM",
+          "label": {
+            "en": "Armenia",
+            "fr": "Arménie",
+            "de": "Armenien",
+            "es": "Armenia"
+          }
+        },
+        {
+          "value": "AW",
+          "label": {
+            "en": "Aruba",
+            "fr": "Aruba",
+            "de": "Aruba",
+            "es": "Aruba"
+          }
+        },
+        {
+          "value": "AU",
+          "label": {
+            "en": "Australia",
+            "fr": "Australie",
+            "de": "Australien",
+            "es": "Australia"
+          }
+        },
+        {
+          "value": "AT",
+          "label": {
+            "en": "Austria",
+            "fr": "Autriche",
+            "de": "Österreich",
+            "es": "Austria"
+          }
+        },
+        {
+          "value": "AZ",
+          "label": {
+            "en": "Azerbaijan",
+            "fr": "Azerbaïdjan",
+            "de": "Aserbaidschan",
+            "es": "Azerbaiyán"
+          }
+        },
+        {
+          "value": "BS",
+          "label": {
+            "en": "Bahamas",
+            "fr": "Bahamas",
+            "de": "Bahamas",
+            "es": "Bahamas"
+          }
+        },
+        {
+          "value": "BH",
+          "label": {
+            "en": "Bahrain",
+            "fr": "Bahreïn",
+            "de": "Bahrain",
+            "es": "Baréin"
+          }
+        },
+        {
+          "value": "BD",
+          "label": {
+            "en": "Bangladesh",
+            "fr": "Bangladesh",
+            "de": "Bangladesch",
+            "es": "Bangladés"
+          }
+        },
+        {
+          "value": "BB",
+          "label": {
+            "en": "Barbados",
+            "fr": "Barbade",
+            "de": "Barbados",
+            "es": "Barbados"
+          }
+        },
+        {
+          "value": "BY",
+          "label": {
+            "en": "Belarus",
+            "fr": "Biélorussie",
+            "de": "Belarus",
+            "es": "Bielorrusia"
+          }
+        },
+        {
+          "value": "BZ",
+          "label": {
+            "en": "Belize",
+            "fr": "Belize",
+            "de": "Belize",
+            "es": "Belice"
+          }
+        },
+        {
+          "value": "BJ",
+          "label": {
+            "en": "Benin",
+            "fr": "Bénin",
+            "de": "Benin",
+            "es": "Benín"
+          }
+        },
+        {
+          "value": "BM",
+          "label": {
+            "en": "Bermuda",
+            "fr": "Bermudes",
+            "de": "Bermuda",
+            "es": "Bermudas"
+          }
+        },
+        {
+          "value": "BO",
+          "label": {
+            "en": "Bolivia",
+            "fr": "Bolivie",
+            "de": "Bolivien",
+            "es": "Bolivia"
+          }
+        },
+        {
+          "value": "BA",
+          "label": {
+            "en": "Bosnia & Herzegovina",
+            "fr": "Bosnie-Herzégovine",
+            "de": "Bosnien und Herzegowina",
+            "es": "Bosnia y Herzegovina"
+          }
+        },
+        {
+          "value": "BW",
+          "label": {
+            "en": "Botswana",
+            "fr": "Botswana",
+            "de": "Botsuana",
+            "es": "Botsuana"
+          }
+        },
+        {
+          "value": "BR",
+          "label": {
+            "en": "Brazil",
+            "fr": "Brésil",
+            "de": "Brasilien",
+            "es": "Brasil"
+          }
+        },
+        {
+          "value": "VG",
+          "label": {
+            "en": "British Virgin Islands",
+            "fr": "Îles Vierges britanniques",
+            "de": "Britische Jungferninseln",
+            "es": "Islas Vírgenes Británicas"
+          }
+        },
+        {
+          "value": "BN",
+          "label": {
+            "en": "Brunei",
+            "fr": "Brunei",
+            "de": "Brunei Darussalam",
+            "es": "Brunéi"
+          }
+        },
+        {
+          "value": "BG",
+          "label": {
+            "en": "Bulgaria",
+            "fr": "Bulgarie",
+            "de": "Bulgarien",
+            "es": "Bulgaria"
+          }
+        },
+        {
+          "value": "BF",
+          "label": {
+            "en": "Burkina Faso",
+            "fr": "Burkina Faso",
+            "de": "Burkina Faso",
+            "es": "Burkina Faso"
+          }
+        },
+        {
+          "value": "BI",
+          "label": {
+            "en": "Burundi",
+            "fr": "Burundi",
+            "de": "Burundi",
+            "es": "Burundi"
+          }
+        },
+        {
+          "value": "CM",
+          "label": {
+            "en": "Cameroon",
+            "fr": "Cameroun",
+            "de": "Kamerun",
+            "es": "Camerún"
+          }
+        },
+        {
+          "value": "IC",
+          "label": {
+            "en": "Canary Islands",
+            "fr": "Îles Canaries",
+            "de": "Kanarische Inseln",
+            "es": "Canarias"
+          }
+        },
+        {
+          "value": "CV",
+          "label": {
+            "en": "Cape Verde",
+            "fr": "Cap-Vert",
+            "de": "Cabo Verde",
+            "es": "Cabo Verde"
+          }
+        },
+        {
+          "value": "BQ",
+          "label": {
+            "en": "Caribbean Netherlands",
+            "fr": "Pays-Bas caribéens",
+            "de": "Karibische Niederlande",
+            "es": "Caribe neerlandés"
+          }
+        },
+        {
+          "value": "KY",
+          "label": {
+            "en": "Cayman Islands",
+            "fr": "Îles Caïmans",
+            "de": "Kaimaninseln",
+            "es": "Islas Caimán"
+          }
+        },
+        {
+          "value": "CF",
+          "label": {
+            "en": "Central African Republic",
+            "fr": "République centrafricaine",
+            "de": "Zentralafrikanische Republik",
+            "es": "República Centroafricana"
+          }
+        },
+        {
+          "value": "TD",
+          "label": {
+            "en": "Chad",
+            "fr": "Tchad",
+            "de": "Tschad",
+            "es": "Chad"
+          }
+        },
+        {
+          "value": "CL",
+          "label": {
+            "en": "Chile",
+            "fr": "Chili",
+            "de": "Chile",
+            "es": "Chile"
+          }
+        },
+        {
+          "value": "CN",
+          "label": {
+            "en": "China",
+            "fr": "Chine",
+            "de": "China",
+            "es": "China"
+          }
+        },
+        {
+          "value": "CX",
+          "label": {
+            "en": "Christmas Island",
+            "fr": "Île Christmas",
+            "de": "Weihnachtsinsel",
+            "es": "Isla de Navidad"
+          }
+        },
+        {
+          "value": "CC",
+          "label": {
+            "en": "Cocos (Keeling) Islands",
+            "fr": "Îles Cocos",
+            "de": "Kokosinseln",
+            "es": "Islas Cocos"
+          }
+        },
+        {
+          "value": "CO",
+          "label": {
+            "en": "Colombia",
+            "fr": "Colombie",
+            "de": "Kolumbien",
+            "es": "Colombia"
+          }
+        },
+        {
+          "value": "KM",
+          "label": {
+            "en": "Comoros",
+            "fr": "Comores",
+            "de": "Komoren",
+            "es": "Comoras"
+          }
+        },
+        {
+          "value": "CG",
+          "label": {
+            "en": "Congo - Brazzaville",
+            "fr": "Congo-Brazzaville",
+            "de": "Kongo-Brazzaville",
+            "es": "Congo"
+          }
+        },
+        {
+          "value": "CD",
+          "label": {
+            "en": "Congo - Kinshasa",
+            "fr": "Congo-Kinshasa",
+            "de": "Kongo-Kinshasa",
+            "es": "República Democrática del Congo"
+          }
+        },
+        {
+          "value": "CK",
+          "label": {
+            "en": "Cook Islands",
+            "fr": "Îles Cook",
+            "de": "Cookinseln",
+            "es": "Islas Cook"
+          }
+        },
+        {
+          "value": "CR",
+          "label": {
+            "en": "Costa Rica",
+            "fr": "Costa Rica",
+            "de": "Costa Rica",
+            "es": "Costa Rica"
+          }
+        },
+        {
+          "value": "CI",
+          "label": {
+            "en": "Côte d’Ivoire",
+            "fr": "Côte d’Ivoire",
+            "de": "Côte d’Ivoire",
+            "es": "Côte d’Ivoire"
+          }
+        },
+        {
+          "value": "HR",
+          "label": {
+            "en": "Croatia",
+            "fr": "Croatie",
+            "de": "Kroatien",
+            "es": "Croacia"
+          }
+        },
+        {
+          "value": "CU",
+          "label": {
+            "en": "Cuba",
+            "fr": "Cuba",
+            "de": "Kuba",
+            "es": "Cuba"
+          }
+        },
+        {
+          "value": "CW",
+          "label": {
+            "en": "Curaçao",
+            "fr": "Curaçao",
+            "de": "Curaçao",
+            "es": "Curazao"
+          }
+        },
+        {
+          "value": "CY",
+          "label": {
+            "en": "Cyprus",
+            "fr": "Chypre",
+            "de": "Zypern",
+            "es": "Chipre"
+          }
+        },
+        {
+          "value": "CZ",
+          "label": {
+            "en": "Czechia",
+            "fr": "Tchéquie",
+            "de": "Tschechien",
+            "es": "Chequia"
+          }
+        },
+        {
+          "value": "DK",
+          "label": {
+            "en": "Denmark",
+            "fr": "Danemark",
+            "de": "Dänemark",
+            "es": "Dinamarca"
+          }
+        },
+        {
+          "value": "DJ",
+          "label": {
+            "en": "Djibouti",
+            "fr": "Djibouti",
+            "de": "Dschibuti",
+            "es": "Yibuti"
+          }
+        },
+        {
+          "value": "DM",
+          "label": {
+            "en": "Dominica",
+            "fr": "Dominique",
+            "de": "Dominica",
+            "es": "Dominica"
+          }
+        },
+        {
+          "value": "DO",
+          "label": {
+            "en": "Dominican Republic",
+            "fr": "République dominicaine",
+            "de": "Dominikanische Republik",
+            "es": "República Dominicana"
+          }
+        },
+        {
+          "value": "EC",
+          "label": {
+            "en": "Ecuador",
+            "fr": "Équateur",
+            "de": "Ecuador",
+            "es": "Ecuador"
+          }
+        },
+        {
+          "value": "EG",
+          "label": {
+            "en": "Egypt",
+            "fr": "Égypte",
+            "de": "Ägypten",
+            "es": "Egipto"
+          }
+        },
+        {
+          "value": "SV",
+          "label": {
+            "en": "El Salvador",
+            "fr": "Salvador",
+            "de": "El Salvador",
+            "es": "El Salvador"
+          }
+        },
+        {
+          "value": "GQ",
+          "label": {
+            "en": "Equatorial Guinea",
+            "fr": "Guinée équatoriale",
+            "de": "Äquatorialguinea",
+            "es": "Guinea Ecuatorial"
+          }
+        },
+        {
+          "value": "ER",
+          "label": {
+            "en": "Eritrea",
+            "fr": "Érythrée",
+            "de": "Eritrea",
+            "es": "Eritrea"
+          }
+        },
+        {
+          "value": "EE",
+          "label": {
+            "en": "Estonia",
+            "fr": "Estonie",
+            "de": "Estland",
+            "es": "Estonia"
+          }
+        },
+        {
+          "value": "SZ",
+          "label": {
+            "en": "Eswatini",
+            "fr": "Eswatini",
+            "de": "Eswatini",
+            "es": "Esuatini"
+          }
+        },
+        {
+          "value": "ET",
+          "label": {
+            "en": "Ethiopia",
+            "fr": "Éthiopie",
+            "de": "Äthiopien",
+            "es": "Etiopía"
+          }
+        },
+        {
+          "value": "FO",
+          "label": {
+            "en": "Faroe Islands",
+            "fr": "Îles Féroé",
+            "de": "Färöer",
+            "es": "Islas Feroe"
+          }
+        },
+        {
+          "value": "FJ",
+          "label": {
+            "en": "Fiji",
+            "fr": "Fidji",
+            "de": "Fidschi",
+            "es": "Fiyi"
+          }
+        },
+        {
+          "value": "FI",
+          "label": {
+            "en": "Finland",
+            "fr": "Finlande",
+            "de": "Finnland",
+            "es": "Finlandia"
+          }
+        },
+        {
+          "value": "GF",
+          "label": {
+            "en": "French Guiana",
+            "fr": "Guyane française",
+            "de": "Französisch-Guayana",
+            "es": "Guayana Francesa"
+          }
+        },
+        {
+          "value": "PF",
+          "label": {
+            "en": "French Polynesia",
+            "fr": "Polynésie française",
+            "de": "Französisch-Polynesien",
+            "es": "Polinesia Francesa"
+          }
+        },
+        {
+          "value": "GA",
+          "label": {
+            "en": "Gabon",
+            "fr": "Gabon",
+            "de": "Gabun",
+            "es": "Gabón"
+          }
+        },
+        {
+          "value": "GM",
+          "label": {
+            "en": "Gambia",
+            "fr": "Gambie",
+            "de": "Gambia",
+            "es": "Gambia"
+          }
+        },
+        {
+          "value": "GE",
+          "label": {
+            "en": "Georgia",
+            "fr": "Géorgie",
+            "de": "Georgien",
+            "es": "Georgia"
+          }
+        },
+        {
+          "value": "DE",
+          "label": {
+            "en": "Germany",
+            "fr": "Allemagne",
+            "de": "Deutschland",
+            "es": "Alemania"
+          }
+        },
+        {
+          "value": "GH",
+          "label": {
+            "en": "Ghana",
+            "fr": "Ghana",
+            "de": "Ghana",
+            "es": "Ghana"
+          }
+        },
+        {
+          "value": "GI",
+          "label": {
+            "en": "Gibraltar",
+            "fr": "Gibraltar",
+            "de": "Gibraltar",
+            "es": "Gibraltar"
+          }
+        },
+        {
+          "value": "GR",
+          "label": {
+            "en": "Greece",
+            "fr": "Grèce",
+            "de": "Griechenland",
+            "es": "Grecia"
+          }
+        },
+        {
+          "value": "GL",
+          "label": {
+            "en": "Greenland",
+            "fr": "Groenland",
+            "de": "Grönland",
+            "es": "Groenlandia"
+          }
+        },
+        {
+          "value": "GD",
+          "label": {
+            "en": "Grenada",
+            "fr": "Grenade",
+            "de": "Grenada",
+            "es": "Granada"
+          }
+        },
+        {
+          "value": "GP",
+          "label": {
+            "en": "Guadeloupe",
+            "fr": "Guadeloupe",
+            "de": "Guadeloupe",
+            "es": "Guadalupe"
+          }
+        },
+        {
+          "value": "GU",
+          "label": {
+            "en": "Guam",
+            "fr": "Guam",
+            "de": "Guam",
+            "es": "Guam"
+          }
+        },
+        {
+          "value": "GT",
+          "label": {
+            "en": "Guatemala",
+            "fr": "Guatemala",
+            "de": "Guatemala",
+            "es": "Guatemala"
+          }
+        },
+        {
+          "value": "GG",
+          "label": {
+            "en": "Guernsey",
+            "fr": "Guernesey",
+            "de": "Guernsey",
+            "es": "Guernesey"
+          }
+        },
+        {
+          "value": "GN",
+          "label": {
+            "en": "Guinea",
+            "fr": "Guinée",
+            "de": "Guinea",
+            "es": "Guinea"
+          }
+        },
+        {
+          "value": "GW",
+          "label": {
+            "en": "Guinea-Bissau",
+            "fr": "Guinée-Bissau",
+            "de": "Guinea-Bissau",
+            "es": "Guinea-Bisáu"
+          }
+        },
+        {
+          "value": "GY",
+          "label": {
+            "en": "Guyana",
+            "fr": "Guyana",
+            "de": "Guyana",
+            "es": "Guyana"
+          }
+        },
+        {
+          "value": "HT",
+          "label": {
+            "en": "Haiti",
+            "fr": "Haïti",
+            "de": "Haiti",
+            "es": "Haití"
+          }
+        },
+        {
+          "value": "HN",
+          "label": {
+            "en": "Honduras",
+            "fr": "Honduras",
+            "de": "Honduras",
+            "es": "Honduras"
+          }
+        },
+        {
+          "value": "HK",
+          "label": {
+            "en": "Hong Kong SAR China",
+            "fr": "R.A.S. chinoise de Hong Kong",
+            "de": "Sonderverwaltungsregion Hongkong",
+            "es": "RAE de Hong Kong (China)"
+          }
+        },
+        {
+          "value": "HU",
+          "label": {
+            "en": "Hungary",
+            "fr": "Hongrie",
+            "de": "Ungarn",
+            "es": "Hungría"
+          }
+        },
+        {
+          "value": "IS",
+          "label": {
+            "en": "Iceland",
+            "fr": "Islande",
+            "de": "Island",
+            "es": "Islandia"
+          }
+        },
+        {
+          "value": "IN",
+          "label": {
+            "en": "India",
+            "fr": "Inde",
+            "de": "Indien",
+            "es": "India"
+          }
+        },
+        {
+          "value": "ID",
+          "label": {
+            "en": "Indonesia",
+            "fr": "Indonésie",
+            "de": "Indonesien",
+            "es": "Indonesia"
+          }
+        },
+        {
+          "value": "IR",
+          "label": {
+            "en": "Iran",
+            "fr": "Iran",
+            "de": "Iran",
+            "es": "Irán"
+          }
+        },
+        {
+          "value": "IE",
+          "label": {
+            "en": "Ireland",
+            "fr": "Irlande",
+            "de": "Irland",
+            "es": "Irlanda"
+          }
+        },
+        {
+          "value": "IM",
+          "label": {
+            "en": "Isle of Man",
+            "fr": "Île de Man",
+            "de": "Isle of Man",
+            "es": "Isla de Man"
+          }
+        },
+        {
+          "value": "IL",
+          "label": {
+            "en": "Israel",
+            "fr": "Israël",
+            "de": "Israel",
+            "es": "Israel"
+          }
+        },
+        {
+          "value": "IT",
+          "label": {
+            "en": "Italy",
+            "fr": "Italie",
+            "de": "Italien",
+            "es": "Italia"
+          }
+        },
+        {
+          "value": "JM",
+          "label": {
+            "en": "Jamaica",
+            "fr": "Jamaïque",
+            "de": "Jamaika",
+            "es": "Jamaica"
+          }
+        },
+        {
+          "value": "JP",
+          "label": {
+            "en": "Japan",
+            "fr": "Japon",
+            "de": "Japan",
+            "es": "Japón"
+          }
+        },
+        {
+          "value": "JE",
+          "label": {
+            "en": "Jersey",
+            "fr": "Jersey",
+            "de": "Jersey",
+            "es": "Jersey"
+          }
+        },
+        {
+          "value": "KZ",
+          "label": {
+            "en": "Kazakhstan",
+            "fr": "Kazakhstan",
+            "de": "Kasachstan",
+            "es": "Kazajistán"
+          }
+        },
+        {
+          "value": "KE",
+          "label": {
+            "en": "Kenya",
+            "fr": "Kenya",
+            "de": "Kenia",
+            "es": "Kenia"
+          }
+        },
+        {
+          "value": "XK",
+          "label": {
+            "en": "Kosovo",
+            "fr": "Kosovo",
+            "de": "Kosovo",
+            "es": "Kosovo"
+          }
+        },
+        {
+          "value": "LV",
+          "label": {
+            "en": "Latvia",
+            "fr": "Lettonie",
+            "de": "Lettland",
+            "es": "Letonia"
+          }
+        },
+        {
+          "value": "LS",
+          "label": {
+            "en": "Lesotho",
+            "fr": "Lesotho",
+            "de": "Lesotho",
+            "es": "Lesoto"
+          }
+        },
+        {
+          "value": "LR",
+          "label": {
+            "en": "Liberia",
+            "fr": "Liberia",
+            "de": "Liberia",
+            "es": "Liberia"
+          }
+        },
+        {
+          "value": "LY",
+          "label": {
+            "en": "Libya",
+            "fr": "Libye",
+            "de": "Libyen",
+            "es": "Libia"
+          }
+        },
+        {
+          "value": "LI",
+          "label": {
+            "en": "Liechtenstein",
+            "fr": "Liechtenstein",
+            "de": "Liechtenstein",
+            "es": "Liechtenstein"
+          }
+        },
+        {
+          "value": "LT",
+          "label": {
+            "en": "Lithuania",
+            "fr": "Lituanie",
+            "de": "Litauen",
+            "es": "Lituania"
+          }
+        },
+        {
+          "value": "MG",
+          "label": {
+            "en": "Madagascar",
+            "fr": "Madagascar",
+            "de": "Madagaskar",
+            "es": "Madagascar"
+          }
+        },
+        {
+          "value": "MW",
+          "label": {
+            "en": "Malawi",
+            "fr": "Malawi",
+            "de": "Malawi",
+            "es": "Malaui"
+          }
+        },
+        {
+          "value": "MY",
+          "label": {
+            "en": "Malaysia",
+            "fr": "Malaisie",
+            "de": "Malaysia",
+            "es": "Malasia"
+          }
+        },
+        {
+          "value": "ML",
+          "label": {
+            "en": "Mali",
+            "fr": "Mali",
+            "de": "Mali",
+            "es": "Mali"
+          }
+        },
+        {
+          "value": "MT",
+          "label": {
+            "en": "Malta",
+            "fr": "Malte",
+            "de": "Malta",
+            "es": "Malta"
+          }
+        },
+        {
+          "value": "MQ",
+          "label": {
+            "en": "Martinique",
+            "fr": "Martinique",
+            "de": "Martinique",
+            "es": "Martinica"
+          }
+        },
+        {
+          "value": "MR",
+          "label": {
+            "en": "Mauritania",
+            "fr": "Mauritanie",
+            "de": "Mauretanien",
+            "es": "Mauritania"
+          }
+        },
+        {
+          "value": "MU",
+          "label": {
+            "en": "Mauritius",
+            "fr": "Maurice",
+            "de": "Mauritius",
+            "es": "Mauricio"
+          }
+        },
+        {
+          "value": "YT",
+          "label": {
+            "en": "Mayotte",
+            "fr": "Mayotte",
+            "de": "Mayotte",
+            "es": "Mayotte"
+          }
+        },
+        {
+          "value": "MX",
+          "label": {
+            "en": "Mexico",
+            "fr": "Mexique",
+            "de": "Mexiko",
+            "es": "México"
+          }
+        },
+        {
+          "value": "MD",
+          "label": {
+            "en": "Moldova",
+            "fr": "Moldavie",
+            "de": "Republik Moldau",
+            "es": "Moldavia"
+          }
+        },
+        {
+          "value": "ME",
+          "label": {
+            "en": "Montenegro",
+            "fr": "Monténégro",
+            "de": "Montenegro",
+            "es": "Montenegro"
+          }
+        },
+        {
+          "value": "MS",
+          "label": {
+            "en": "Montserrat",
+            "fr": "Montserrat",
+            "de": "Montserrat",
+            "es": "Montserrat"
+          }
+        },
+        {
+          "value": "MA",
+          "label": {
+            "en": "Morocco",
+            "fr": "Maroc",
+            "de": "Marokko",
+            "es": "Marruecos"
+          }
+        },
+        {
+          "value": "MZ",
+          "label": {
+            "en": "Mozambique",
+            "fr": "Mozambique",
+            "de": "Mosambik",
+            "es": "Mozambique"
+          }
+        },
+        {
+          "value": "NA",
+          "label": {
+            "en": "Namibia",
+            "fr": "Namibie",
+            "de": "Namibia",
+            "es": "Namibia"
+          }
+        },
+        {
+          "value": "NL",
+          "label": {
+            "en": "Netherlands",
+            "fr": "Pays-Bas",
+            "de": "Niederlande",
+            "es": "Países Bajos"
+          }
+        },
+        {
+          "value": "NC",
+          "label": {
+            "en": "New Caledonia",
+            "fr": "Nouvelle-Calédonie",
+            "de": "Neukaledonien",
+            "es": "Nueva Caledonia"
+          }
+        },
+        {
+          "value": "NZ",
+          "label": {
+            "en": "New Zealand",
+            "fr": "Nouvelle-Zélande",
+            "de": "Neuseeland",
+            "es": "Nueva Zelanda"
+          }
+        },
+        {
+          "value": "NI",
+          "label": {
+            "en": "Nicaragua",
+            "fr": "Nicaragua",
+            "de": "Nicaragua",
+            "es": "Nicaragua"
+          }
+        },
+        {
+          "value": "NE",
+          "label": {
+            "en": "Niger",
+            "fr": "Niger",
+            "de": "Niger",
+            "es": "Níger"
+          }
+        },
+        {
+          "value": "NG",
+          "label": {
+            "en": "Nigeria",
+            "fr": "Nigeria",
+            "de": "Nigeria",
+            "es": "Nigeria"
+          }
+        },
+        {
+          "value": "NF",
+          "label": {
+            "en": "Norfolk Island",
+            "fr": "Île Norfolk",
+            "de": "Norfolkinsel",
+            "es": "Isla Norfolk"
+          }
+        },
+        {
+          "value": "MK",
+          "label": {
+            "en": "North Macedonia",
+            "fr": "Macédoine du Nord",
+            "de": "Nordmazedonien",
+            "es": "Macedonia del Norte"
+          }
+        },
+        {
+          "value": "NO",
+          "label": {
+            "en": "Norway",
+            "fr": "Norvège",
+            "de": "Norwegen",
+            "es": "Noruega"
+          }
+        },
+        {
+          "value": "PK",
+          "label": {
+            "en": "Pakistan",
+            "fr": "Pakistan",
+            "de": "Pakistan",
+            "es": "Pakistán"
+          }
+        },
+        {
+          "value": "PA",
+          "label": {
+            "en": "Panama",
+            "fr": "Panama",
+            "de": "Panama",
+            "es": "Panamá"
+          }
+        },
+        {
+          "value": "PY",
+          "label": {
+            "en": "Paraguay",
+            "fr": "Paraguay",
+            "de": "Paraguay",
+            "es": "Paraguay"
+          }
+        },
+        {
+          "value": "PE",
+          "label": {
+            "en": "Peru",
+            "fr": "Pérou",
+            "de": "Peru",
+            "es": "Perú"
+          }
+        },
+        {
+          "value": "PH",
+          "label": {
+            "en": "Philippines",
+            "fr": "Philippines",
+            "de": "Philippinen",
+            "es": "Filipinas"
+          }
+        },
+        {
+          "value": "PL",
+          "label": {
+            "en": "Poland",
+            "fr": "Pologne",
+            "de": "Polen",
+            "es": "Polonia"
+          }
+        },
+        {
+          "value": "PT",
+          "label": {
+            "en": "Portugal",
+            "fr": "Portugal",
+            "de": "Portugal",
+            "es": "Portugal"
+          }
+        },
+        {
+          "value": "PR",
+          "label": {
+            "en": "Puerto Rico",
+            "fr": "Porto Rico",
+            "de": "Puerto Rico",
+            "es": "Puerto Rico"
+          }
+        },
+        {
+          "value": "RE",
+          "label": {
+            "en": "Réunion",
+            "fr": "La Réunion",
+            "de": "Réunion",
+            "es": "Reunión"
+          }
+        },
+        {
+          "value": "RO",
+          "label": {
+            "en": "Romania",
+            "fr": "Roumanie",
+            "de": "Rumänien",
+            "es": "Rumanía"
+          }
+        },
+        {
+          "value": "RU",
+          "label": {
+            "en": "Russia",
+            "fr": "Russie",
+            "de": "Russland",
+            "es": "Rusia"
+          }
+        },
+        {
+          "value": "RW",
+          "label": {
+            "en": "Rwanda",
+            "fr": "Rwanda",
+            "de": "Ruanda",
+            "es": "Ruanda"
+          }
+        },
+        {
+          "value": "SM",
+          "label": {
+            "en": "San Marino",
+            "fr": "Saint-Marin",
+            "de": "San Marino",
+            "es": "San Marino"
+          }
+        },
+        {
+          "value": "ST",
+          "label": {
+            "en": "São Tomé & Príncipe",
+            "fr": "Sao Tomé-et-Principe",
+            "de": "São Tomé und Príncipe",
+            "es": "Santo Tomé y Príncipe"
+          }
+        },
+        {
+          "value": "SA",
+          "label": {
+            "en": "Saudi Arabia",
+            "fr": "Arabie saoudite",
+            "de": "Saudi-Arabien",
+            "es": "Arabia Saudí"
+          }
+        },
+        {
+          "value": "SN",
+          "label": {
+            "en": "Senegal",
+            "fr": "Sénégal",
+            "de": "Senegal",
+            "es": "Senegal"
+          }
+        },
+        {
+          "value": "RS",
+          "label": {
+            "en": "Serbia",
+            "fr": "Serbie",
+            "de": "Serbien",
+            "es": "Serbia"
+          }
+        },
+        {
+          "value": "SC",
+          "label": {
+            "en": "Seychelles",
+            "fr": "Seychelles",
+            "de": "Seychellen",
+            "es": "Seychelles"
+          }
+        },
+        {
+          "value": "SL",
+          "label": {
+            "en": "Sierra Leone",
+            "fr": "Sierra Leone",
+            "de": "Sierra Leone",
+            "es": "Sierra Leona"
+          }
+        },
+        {
+          "value": "SG",
+          "label": {
+            "en": "Singapore",
+            "fr": "Singapour",
+            "de": "Singapur",
+            "es": "Singapur"
+          }
+        },
+        {
+          "value": "SX",
+          "label": {
+            "en": "Sint Maarten",
+            "fr": "Saint-Martin (partie néerlandaise)",
+            "de": "Sint Maarten",
+            "es": "Sint Maarten"
+          }
+        },
+        {
+          "value": "SK",
+          "label": {
+            "en": "Slovakia",
+            "fr": "Slovaquie",
+            "de": "Slowakei",
+            "es": "Eslovaquia"
+          }
+        },
+        {
+          "value": "SI",
+          "label": {
+            "en": "Slovenia",
+            "fr": "Slovénie",
+            "de": "Slowenien",
+            "es": "Eslovenia"
+          }
+        },
+        {
+          "value": "SO",
+          "label": {
+            "en": "Somalia",
+            "fr": "Somalie",
+            "de": "Somalia",
+            "es": "Somalia"
+          }
+        },
+        {
+          "value": "ZA",
+          "label": {
+            "en": "South Africa",
+            "fr": "Afrique du Sud",
+            "de": "Südafrika",
+            "es": "Sudáfrica"
+          }
+        },
+        {
+          "value": "KR",
+          "label": {
+            "en": "South Korea",
+            "fr": "Corée du Sud",
+            "de": "Südkorea",
+            "es": "Corea del Sur"
+          }
+        },
+        {
+          "value": "SS",
+          "label": {
+            "en": "South Sudan",
+            "fr": "Soudan du Sud",
+            "de": "Südsudan",
+            "es": "Sudán del Sur"
+          }
+        },
+        {
+          "value": "ES",
+          "label": {
+            "en": "Spain",
+            "fr": "Espagne",
+            "de": "Spanien",
+            "es": "España"
+          }
+        },
+        {
+          "value": "LK",
+          "label": {
+            "en": "Sri Lanka",
+            "fr": "Sri Lanka",
+            "de": "Sri Lanka",
+            "es": "Sri Lanka"
+          }
+        },
+        {
+          "value": "BL",
+          "label": {
+            "en": "St. Barthélemy",
+            "fr": "Saint-Barthélemy",
+            "de": "St. Barthélemy",
+            "es": "San Bartolomé"
+          }
+        },
+        {
+          "value": "SH",
+          "label": {
+            "en": "St. Helena",
+            "fr": "Sainte-Hélène",
+            "de": "St. Helena",
+            "es": "Santa Elena"
+          }
+        },
+        {
+          "value": "KN",
+          "label": {
+            "en": "St. Kitts & Nevis",
+            "fr": "Saint-Christophe-et-Niévès",
+            "de": "St. Kitts und Nevis",
+            "es": "San Cristóbal y Nieves"
+          }
+        },
+        {
+          "value": "LC",
+          "label": {
+            "en": "St. Lucia",
+            "fr": "Sainte-Lucie",
+            "de": "St. Lucia",
+            "es": "Santa Lucía"
+          }
+        },
+        {
+          "value": "MF",
+          "label": {
+            "en": "St. Martin",
+            "fr": "Saint-Martin",
+            "de": "St. Martin",
+            "es": "San Martín"
+          }
+        },
+        {
+          "value": "PM",
+          "label": {
+            "en": "St. Pierre & Miquelon",
+            "fr": "Saint-Pierre-et-Miquelon",
+            "de": "St. Pierre und Miquelon",
+            "es": "San Pedro y Miquelón"
+          }
+        },
+        {
+          "value": "VC",
+          "label": {
+            "en": "St. Vincent & Grenadines",
+            "fr": "Saint-Vincent-et-les Grenadines",
+            "de": "St. Vincent und die Grenadinen",
+            "es": "San Vicente y las Granadinas"
+          }
+        },
+        {
+          "value": "SD",
+          "label": {
+            "en": "Sudan",
+            "fr": "Soudan",
+            "de": "Sudan",
+            "es": "Sudán"
+          }
+        },
+        {
+          "value": "SR",
+          "label": {
+            "en": "Suriname",
+            "fr": "Suriname",
+            "de": "Suriname",
+            "es": "Surinam"
+          }
+        },
+        {
+          "value": "SJ",
+          "label": {
+            "en": "Svalbard & Jan Mayen",
+            "fr": "Svalbard et Jan Mayen",
+            "de": "Spitzbergen und Jan Mayen",
+            "es": "Svalbard y Jan Mayen"
+          }
+        },
+        {
+          "value": "SE",
+          "label": {
+            "en": "Sweden",
+            "fr": "Suède",
+            "de": "Schweden",
+            "es": "Suecia"
+          }
+        },
+        {
+          "value": "TW",
+          "label": {
+            "en": "Taiwan",
+            "fr": "Taïwan",
+            "de": "Taiwan",
+            "es": "Taiwán"
+          }
+        },
+        {
+          "value": "TZ",
+          "label": {
+            "en": "Tanzania",
+            "fr": "Tanzanie",
+            "de": "Tansania",
+            "es": "Tanzania"
+          }
+        },
+        {
+          "value": "TH",
+          "label": {
+            "en": "Thailand",
+            "fr": "Thaïlande",
+            "de": "Thailand",
+            "es": "Tailandia"
+          }
+        },
+        {
+          "value": "TG",
+          "label": {
+            "en": "Togo",
+            "fr": "Togo",
+            "de": "Togo",
+            "es": "Togo"
+          }
+        },
+        {
+          "value": "TO",
+          "label": {
+            "en": "Tonga",
+            "fr": "Tonga",
+            "de": "Tonga",
+            "es": "Tonga"
+          }
+        },
+        {
+          "value": "TT",
+          "label": {
+            "en": "Trinidad & Tobago",
+            "fr": "Trinité-et-Tobago",
+            "de": "Trinidad und Tobago",
+            "es": "Trinidad y Tobago"
+          }
+        },
+        {
+          "value": "TN",
+          "label": {
+            "en": "Tunisia",
+            "fr": "Tunisie",
+            "de": "Tunesien",
+            "es": "Túnez"
+          }
+        },
+        {
+          "value": "TR",
+          "label": {
+            "en": "Türkiye",
+            "fr": "Turquie",
+            "de": "Türkei",
+            "es": "Turquía"
+          }
+        },
+        {
+          "value": "TC",
+          "label": {
+            "en": "Turks & Caicos Islands",
+            "fr": "Îles Turques-et-Caïques",
+            "de": "Turks- und Caicosinseln",
+            "es": "Islas Turcas y Caicos"
+          }
+        },
+        {
+          "value": "VI",
+          "label": {
+            "en": "U.S. Virgin Islands",
+            "fr": "Îles Vierges des États-Unis",
+            "de": "Amerikanische Jungferninseln",
+            "es": "Islas Vírgenes de EE. UU."
+          }
+        },
+        {
+          "value": "UG",
+          "label": {
+            "en": "Uganda",
+            "fr": "Ouganda",
+            "de": "Uganda",
+            "es": "Uganda"
+          }
+        },
+        {
+          "value": "UA",
+          "label": {
+            "en": "Ukraine",
+            "fr": "Ukraine",
+            "de": "Ukraine",
+            "es": "Ucrania"
+          }
+        },
+        {
+          "value": "AE",
+          "label": {
+            "en": "United Arab Emirates",
+            "fr": "Émirats arabes unis",
+            "de": "Vereinigte Arabische Emirate",
+            "es": "Emiratos Árabes Unidos"
+          }
+        },
+        {
+          "value": "GB",
+          "label": {
+            "en": "United Kingdom",
+            "fr": "Royaume-Uni",
+            "de": "Vereinigtes Königreich",
+            "es": "Reino Unido"
+          }
+        },
+        {
+          "value": "US",
+          "label": {
+            "en": "United States",
+            "fr": "États-Unis",
+            "de": "Vereinigte Staaten",
+            "es": "Estados Unidos"
+          }
+        },
+        {
+          "value": "UY",
+          "label": {
+            "en": "Uruguay",
+            "fr": "Uruguay",
+            "de": "Uruguay",
+            "es": "Uruguay"
+          }
+        },
+        {
+          "value": "UZ",
+          "label": {
+            "en": "Uzbekistan",
+            "fr": "Ouzbékistan",
+            "de": "Usbekistan",
+            "es": "Uzbekistán"
+          }
+        },
+        {
+          "value": "VU",
+          "label": {
+            "en": "Vanuatu",
+            "fr": "Vanuatu",
+            "de": "Vanuatu",
+            "es": "Vanuatu"
+          }
+        },
+        {
+          "value": "VA",
+          "label": {
+            "en": "Vatican City",
+            "fr": "État de la Cité du Vatican",
+            "de": "Vatikanstadt",
+            "es": "Ciudad del Vaticano"
+          }
+        },
+        {
+          "value": "VE",
+          "label": {
+            "en": "Venezuela",
+            "fr": "Venezuela",
+            "de": "Venezuela",
+            "es": "Venezuela"
+          }
+        },
+        {
+          "value": "VN",
+          "label": {
+            "en": "Vietnam",
+            "fr": "Viêt Nam",
+            "de": "Vietnam",
+            "es": "Vietnam"
+          }
+        },
+        {
+          "value": "WF",
+          "label": {
+            "en": "Wallis & Futuna",
+            "fr": "Wallis-et-Futuna",
+            "de": "Wallis und Futuna",
+            "es": "Wallis y Futuna"
+          }
+        },
+        {
+          "value": "EH",
+          "label": {
+            "en": "Western Sahara",
+            "fr": "Sahara occidental",
+            "de": "Westsahara",
+            "es": "Sáhara Occidental"
+          }
+        },
+        {
+          "value": "ZM",
+          "label": {
+            "en": "Zambia",
+            "fr": "Zambie",
+            "de": "Sambia",
+            "es": "Zambia"
+          }
+        },
+        {
+          "value": "ZW",
+          "label": {
+            "en": "Zimbabwe",
+            "fr": "Zimbabwe",
+            "de": "Simbabwe",
+            "es": "Zimbabue"
+          }
+        }
+      ]
+    },
+    {
+      "key": "subdivision",
+      "type": "string",
+      "label": {
+        "en": "Subdivision (optional)",
+        "fr": "Subdivision (facultatif)",
+        "de": "Region (optional)",
+        "es": "Subdivisión (opcional)"
+      },
+      "description": {
+        "en": "Code of a region with its own holidays: 67, 68 or 57 for Alsace-Moselle, BY for Bavaria, QC for Quebec, VD for Vaud. \"Check the configuration\" lists the codes of the country.",
+        "fr": "Code d'une région aux fériés propres : 67, 68 ou 57 pour l'Alsace-Moselle, BY pour la Bavière, QC pour le Québec, VD pour Vaud. « Vérifier la configuration » liste les codes du pays.",
+        "de": "Code einer Region mit eigenen Feiertagen: BY für Bayern, BW für Baden-Württemberg, 67 für das Elsass, QC für Québec. „Konfiguration prüfen“ zeigt die Codes des Landes.",
+        "es": "Código de una región con festivos propios: MD para Madrid, CT para Cataluña, 67 para Alsacia, QC para Quebec. «Comprobar la configuración» indica los códigos del país."
+      },
+      "placeholder": {
+        "en": "e.g. 67, BY, QC",
+        "fr": "ex. 67, BY, QC",
+        "de": "z. B. BY, BW, 67",
+        "es": "p. ej. MD, CT, 67"
+      },
+      "required": false,
+      "default": ""
+    },
+    {
+      "key": "holiday_types",
+      "type": "multi_select",
+      "label": {
+        "en": "Days put in the calendar",
+        "fr": "Jours mis dans le calendrier",
+        "de": "Tage im Kalender",
+        "es": "Días incluidos en el calendario"
+      },
+      "description": {
+        "en": "Public holidays are the days off by law. The others depend on the country: bank holidays, local school days off, optional days, observances (Mother's Day…).",
+        "fr": "Les fériés publics sont les jours chômés légaux. Les autres dépendent du pays : fériés bancaires, jours sans école locaux, jours facultatifs, célébrations (fête des Mères…).",
+        "de": "Gesetzliche Feiertage sind die arbeitsfreien Tage per Gesetz. Die anderen hängen vom Land ab: Bankfeiertage, schulfreie Tage, optionale Tage, Gedenktage (Muttertag…).",
+        "es": "Los festivos oficiales son los días no laborables por ley. Los demás dependen del país: festivos bancarios, días sin clase locales, días opcionales, conmemoraciones (Día de la Madre…)."
+      },
+      "required": false,
+      "default": ["public"],
+      "options": [
+        {
+          "value": "public",
+          "label": {
+            "en": "Public holidays",
+            "fr": "Fériés publics",
+            "de": "Gesetzliche Feiertage",
+            "es": "Festivos oficiales"
+          }
+        },
+        {
+          "value": "bank",
+          "label": {
+            "en": "Bank holidays",
+            "fr": "Fériés bancaires",
+            "de": "Bankfeiertage",
+            "es": "Festivos bancarios"
+          }
+        },
+        {
+          "value": "school",
+          "label": {
+            "en": "Local school days off",
+            "fr": "Jours sans école locaux",
+            "de": "Lokale schulfreie Tage",
+            "es": "Días sin clase locales"
+          }
+        },
+        {
+          "value": "optional",
+          "label": {
+            "en": "Optional days off",
+            "fr": "Jours facultatifs",
+            "de": "Optionale freie Tage",
+            "es": "Días libres opcionales"
+          }
+        },
+        {
+          "value": "observance",
+          "label": {
+            "en": "Observances",
+            "fr": "Célébrations",
+            "de": "Gedenktage",
+            "es": "Conmemoraciones"
+          }
+        }
+      ]
+    },
+    {
+      "key": "extra_days",
+      "type": "string",
+      "label": {
+        "en": "Extra days off",
+        "fr": "Jours chômés en plus",
+        "de": "Zusätzliche freie Tage",
+        "es": "Días libres adicionales"
+      },
+      "description": {
+        "en": "Bridges or company days off, added to the holidays calendar, separated by commas: 2026-05-15 for one date, 12-24 for every year, with an optional name after =.",
+        "fr": "Ponts ou jours de fermeture, ajoutés au calendrier des fériés, séparés par des virgules : 2026-05-15 pour une date, 12-24 pour chaque année, avec un nom facultatif après =.",
+        "de": "Brückentage oder Betriebsferien, im Feiertagskalender ergänzt, durch Kommas getrennt: 2026-05-15 für ein Datum, 12-24 für jedes Jahr, mit optionalem Namen nach =.",
+        "es": "Puentes o días de cierre, añadidos al calendario de festivos, separados por comas: 2026-05-15 para una fecha, 12-24 para cada año, con un nombre opcional tras =."
+      },
+      "placeholder": {
+        "en": "e.g. 2026-05-15=Bridge, 12-24",
+        "fr": "ex. 2026-05-15=Pont, 12-24",
+        "de": "z. B. 2026-05-15=Brückentag, 12-24",
+        "es": "p. ej. 2026-05-15=Puente, 12-24"
+      },
+      "required": false,
+      "default": ""
+    },
+    {
+      "key": "ignored_holidays",
+      "type": "string",
+      "label": {
+        "en": "Holidays left out",
+        "fr": "Fériés retirés",
+        "de": "Weggelassene Feiertage",
+        "es": "Festivos excluidos"
+      },
+      "description": {
+        "en": "Holidays not put in the calendar, separated by commas: a name (any language, e.g. Whit Monday for the French solidarity day), a date 2027-05-17, or 12-26 for every year.",
+        "fr": "Fériés à ne pas mettre dans le calendrier, séparés par des virgules : un nom (Lundi de Pentecôte pour la journée de solidarité), une date 2027-05-17, ou 12-26 pour chaque année.",
+        "de": "Feiertage, die nicht in den Kalender kommen, durch Kommas getrennt: ein Name (z. B. Pfingstmontag), ein Datum 2027-05-17 oder 12-26 für jedes Jahr.",
+        "es": "Festivos que no se ponen en el calendario, separados por comas: un nombre (p. ej. Lunes de Pentecostés), una fecha 2027-05-17 o 12-26 para cada año."
+      },
+      "placeholder": {
+        "en": "e.g. Whit Monday",
+        "fr": "ex. Lundi de Pentecôte",
+        "de": "z. B. Pfingstmontag",
+        "es": "p. ej. Lunes de Pentecostés"
+      },
+      "required": false,
+      "default": ""
+    },
+    {
+      "key": "school_section",
+      "type": "section",
+      "label": {
+        "en": "French school holidays",
+        "fr": "Vacances scolaires",
+        "de": "Französische Schulferien",
+        "es": "Vacaciones escolares francesas"
+      },
+      "description": {
+        "en": "Optional, for France and its overseas territories: the holidays of your zone are read once a day from the open data of the Education ministry (data.education.gouv.fr) and put in a second calendar.",
+        "fr": "Facultatif, pour la France et l'outre-mer : les vacances de votre zone sont lues une fois par jour sur les données ouvertes de l'Éducation nationale (data.education.gouv.fr) et mises dans un second calendrier.",
+        "de": "Optional, für Frankreich und seine Überseegebiete: Die Ferien deiner Zone werden einmal am Tag aus den offenen Daten des Bildungsministeriums (data.education.gouv.fr) gelesen und in einen zweiten Kalender gelegt.",
+        "es": "Opcional, para Francia y sus territorios de ultramar: las vacaciones de su zona se leen una vez al día de los datos abiertos del Ministerio de Educación (data.education.gouv.fr) y se ponen en un segundo calendario."
+      },
+      "links": [
+        {
+          "url": "https://data.education.gouv.fr/explore/dataset/fr-en-calendrier-scolaire/",
+          "label": {
+            "en": "School calendar (open data)",
+            "fr": "Calendrier scolaire (open data)",
+            "de": "Schulkalender (Open Data)",
+            "es": "Calendario escolar (datos abiertos)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "school_zone",
+      "type": "select",
+      "label": {
+        "en": "School holiday zone",
+        "fr": "Zone de vacances scolaires",
+        "de": "Ferienzone",
+        "es": "Zona de vacaciones escolares"
+      },
+      "required": false,
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": {
+            "en": "None",
+            "fr": "Aucune",
+            "de": "Keine",
+            "es": "Ninguna"
+          }
+        },
+        {
+          "value": "zone_a",
+          "label": {
+            "en": "Zone A",
+            "fr": "Zone A",
+            "de": "Zone A",
+            "es": "Zone A"
+          }
+        },
+        {
+          "value": "zone_b",
+          "label": {
+            "en": "Zone B",
+            "fr": "Zone B",
+            "de": "Zone B",
+            "es": "Zone B"
+          }
+        },
+        {
+          "value": "zone_c",
+          "label": {
+            "en": "Zone C",
+            "fr": "Zone C",
+            "de": "Zone C",
+            "es": "Zone C"
+          }
+        },
+        {
+          "value": "corse",
+          "label": {
+            "en": "Corsica",
+            "fr": "Corse",
+            "de": "Korsika",
+            "es": "Córcega"
+          }
+        },
+        {
+          "value": "guadeloupe",
+          "label": {
+            "en": "Guadeloupe",
+            "fr": "Guadeloupe",
+            "de": "Guadeloupe",
+            "es": "Guadeloupe"
+          }
+        },
+        {
+          "value": "guyane",
+          "label": {
+            "en": "French Guiana",
+            "fr": "Guyane",
+            "de": "Französisch-Guayana",
+            "es": "Guayana Francesa"
+          }
+        },
+        {
+          "value": "martinique",
+          "label": {
+            "en": "Martinique",
+            "fr": "Martinique",
+            "de": "Martinique",
+            "es": "Martinica"
+          }
+        },
+        {
+          "value": "mayotte",
+          "label": {
+            "en": "Mayotte",
+            "fr": "Mayotte",
+            "de": "Mayotte",
+            "es": "Mayotte"
+          }
+        },
+        {
+          "value": "reunion",
+          "label": {
+            "en": "Réunion",
+            "fr": "La Réunion",
+            "de": "Réunion",
+            "es": "Reunión"
+          }
+        },
+        {
+          "value": "saint_pierre_et_miquelon",
+          "label": {
+            "en": "Saint Pierre and Miquelon",
+            "fr": "Saint-Pierre-et-Miquelon",
+            "de": "Saint-Pierre und Miquelon",
+            "es": "San Pedro y Miquelón"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "key": "check_configuration",
+      "label": {
+        "en": "Check the configuration",
+        "fr": "Vérifier la configuration",
+        "de": "Konfiguration prüfen",
+        "es": "Comprobar la configuración"
+      },
+      "description": {
+        "en": "Shows the holidays in use, the next holiday, the school holidays read, the users who get the calendars, what to fix, and the subdivision codes.",
+        "fr": "Affiche les fériés utilisés, le prochain férié, les vacances scolaires lues, les utilisateurs qui reçoivent les calendriers, ce qu'il faut corriger et les codes de subdivision.",
+        "de": "Zeigt die verwendeten Feiertage, den nächsten Feiertag, die gelesenen Schulferien, wer die Kalender bekommt, was zu korrigieren ist, und die Regionscodes.",
+        "es": "Muestra los festivos usados, el próximo festivo, las vacaciones escolares leídas, los usuarios que reciben los calendarios, lo que hay que corregir y los códigos de subdivisión."
+      },
+      "timeout_seconds": 30
+    }
+  ]
+}
