@@ -10,6 +10,8 @@ the notes of the version's GitHub Release.
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-11-16
+
 ## [1.0.1] - 2026-10-28
 
 ### Added
@@ -30,5 +32,6 @@ the notes of the version's GitHub Release.
   retried and shown in the status.
 - A "Check the configuration" button, and the documentation in English, French, German and Spanish.
 
-[Unreleased]: https://github.com/prohand/gladys-calendar-holidays/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/prohand/gladys-calendar-holidays/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/prohand/gladys-calendar-holidays/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/prohand/gladys-calendar-holidays/releases/tag/v1.0.1
